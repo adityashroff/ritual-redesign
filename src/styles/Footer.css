@@ -1,0 +1,134 @@
+/* Footer Container */
+.footer-container {
+    background-color: #23272A;
+    color: #B0BEC5; 
+    padding: 40px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+  }
+  
+  /* Top Section: Links */
+  .footer-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 40px;
+    text-align: center;
+  }
+  
+  .footer-links {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-title {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+  }
+  
+  .footer-link {
+    color: #B0BEC5;
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color 0.3s ease, background-color 0.3s ease;
+  }
+  
+  .footer-link:hover {
+    color: #00a8d0; 
+    background-color: rgba(255, 255, 255, 0.1); 
+  }
+  
+  .footer-link:active {
+    color: #1E90FF; 
+  }
+  
+  /* Middle Section: Download App */
+  .footer-middle {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  .footer-download-button {
+    background-color: #1E90FF;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 30px;
+    font-size: 1rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .footer-download-button:hover {
+    background-color: #ffffff;
+    transform: scale(1.05);
+  }
+  
+  .footer-download-button svg {
+    margin-right: 5px;
+  }
+  
+  .download-buttons {
+    display: flex;
+    gap: 20px;
+  }
+  
+  /* Bottom Section: Social Media & Legal */
+  .footer-bottom {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  
+  .social-media {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+  }
+  
+  .social-icon {
+    color: #00a8d0;
+    text-decoration: none;
+    font-size: 1.5rem;
+    transition: color 0.3s ease;
+  }
+  
+  .social-icon:hover {
+    color: #1E90FF; 
+  }
+  
+  .footer-legal {
+    color: #B0BEC5;
+    font-size: 0.8rem;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 900px) {
+    .footer-top {
+      flex-direction: column;
+      gap: 20px;
+    }
+  
+    .footer-bottom {
+      flex-direction: column;
+    }
+  
+    .download-buttons {
+      flex-direction: column;
+      gap: 10px;
+    }
+  }
+  

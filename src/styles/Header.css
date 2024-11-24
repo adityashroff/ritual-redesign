@@ -1,0 +1,141 @@
+/* General AppBar and Toolbar */
+.header-appbar {
+  background-color: #23272A; /* Gunmetal black */
+  box-shadow: none;
+}
+
+.header-toolbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 40px;
+  height: 80px;
+  background-color: #23272A;
+  position: relative;
+}
+
+/* Logo Container */
+.logo-container {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+
+.logo-icon {
+  height: 50px;
+  cursor: pointer;
+  transition: transform 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+.logo-container:hover .logo-icon {
+  transform: scale(1.05);
+}
+
+.slideout-image {
+  position: absolute;
+  top: 50%;
+  left: 110%;
+  transform: translateY(-50%) translateX(-50%);
+  height: 50px;
+  opacity: 0;
+  transition: transform 0.5s cubic-bezier(0.4, 0.0, 0.2, 1), opacity 0.5s ease;
+}
+
+.logo-container:hover .slideout-image {
+  transform: translateY(-50%) translateX(0);
+  opacity: 1;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  gap: 24px;
+  background-color: #23272A; 
+  padding: 10px 20px;
+  border-radius: 5px;
+}
+
+.navbar-link {
+  color: #00a8d0; /* Soft gray-blue for inactive links */
+  font-size: 1rem;
+  text-transform: capitalize;
+  padding: 8px 12px;
+  border-radius: 4px;
+  transition: color 0.3s ease, background-color 0.3s ease;
+}
+
+.navbar-link:hover {
+  color: #00a8d0; /* White on hover */
+  background-color: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-link:active {
+  color: #1E90FF; 
+}
+
+/* Download Button */
+.download-button {
+  font-size: 1rem;
+  font-weight: 500;
+  padding: 12px 24px;
+  border-radius: 30px;
+  background-color: #00a8d0; 
+  color: 00a8d0;
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.download-button:hover {
+  background-color: #00a8d0; 
+  transform: scale(1.05);
+}
+
+/* Hamburger Menu */
+.menu-button {
+  color: white;
+}
+
+/* Drawer Styles */
+.MuiDrawer-paper {
+  background-color: #23272A;
+}
+
+.MuiListItemText-root {
+  color: #B0BEC5;
+}
+
+.MuiListItemText-root:hover {
+  color: #1E90FF;
+}
+
+/* Responsive Styles */
+@media (max-width: 900px) {
+  .navbar {
+    display: none;
+  }
+
+  .download-button {
+    display: none;
+  }
+
+  .menu-button {
+    display: block;
+    color: #ffffff;
+  }
+
+  /* Centered Mobile Logo */
+  .mobile-center-logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50px;
+    width: auto;
+    display: block;
+  }
+}
+
+@media (min-width: 901px) {
+  /* Hide Mobile Logo for Desktop */
+  .mobile-center-logo {
+    display: none;
+  }
+}
