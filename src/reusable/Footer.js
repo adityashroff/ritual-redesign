@@ -37,18 +37,18 @@ const Footer = () => {
       {/* Middle Section: Download App */}
       <Box className="footer-middle">
         <Typography variant="h6" className="footer-text">
-          Get the Ritual App
+          Get the Ritual App Today!
         </Typography>
         <Box className="download-buttons">
           <Button
-            href="https://play.google.com/store/apps/details?id=com.ritual"
+            href="https://play.google.com/store/apps/details?id=co.ritual.app&hl=en_CA"
             target="_blank"
             className="footer-download-button"
           >
             <Android /> Google Play
           </Button>
           <Button
-            href="https://apps.apple.com/us/app/ritual/id1352281604"
+            href="https://apps.apple.com/us/app/ritual-order-local-takeout/id938467045"
             target="_blank"
             className="footer-download-button"
           >
@@ -61,13 +61,13 @@ const Footer = () => {
       <Box className="footer-bottom">
         <Box className="social-media">
           <Typography className="footer-text">Follow Us:</Typography>
-          <a href="#facebook" className="social-icon">
+          <a href="https://www.facebook.com/ritual.co/" className="social-icon">
             <Facebook />
           </a>
-          <a href="#twitter" className="social-icon">
+          <a href="https://twitter.com/ritual_co?lang=en" className="social-icon">
             <Twitter />
           </a>
-          <a href="#instagram" className="social-icon">
+          <a href="https://www.instagram.com/ritual_co/?hl=en" className="social-icon">
             <Instagram />
           </a>
         </Box>
