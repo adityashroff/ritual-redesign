@@ -1,13 +1,14 @@
-import React from 'react';
-import Header from './reusable/Header';  
-import Footer from './reusable/Footer';
+import React from "react";
+import Header from "./reusable/Header";
+import Footer from "./reusable/Footer";
+import BusinessPage from "./pages/Business";
 function App() {
   return (
     <div>
       <Header />
       <main>
         <div>
-          <h1>Welcome to Ritual Website</h1>
+          <BusinessPage />
         </div>
       </main>
       <Footer />
