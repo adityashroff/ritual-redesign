@@ -1,8 +1,9 @@
 import React from 'react';
 import { BrowserRouter as Router } from 'react-router-dom';
-import AppRoutes from './Routes'; // Import the routing logic
-import Header from './reusable/Header'; // Common Header
-import Footer from './reusable/Footer'; // Common Footer
+import AppRoutes from './Routes'; 
+import Header from './reusable/Header'; 
+import Footer from './reusable/Footer'; 
+
 
 const App = () => {
   return (
