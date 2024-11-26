@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Header from './reusable/Header';  
 import Footer from './reusable/Footer';
 import About from './About/About'; 
-function App() {
+const App=() => {
   return (
     <div>
       <Header />
@@ -21,6 +21,6 @@ function App() {
       <Footer />
     </div>
   );
-}
+};
 
 export default App;
