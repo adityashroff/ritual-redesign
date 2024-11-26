@@ -1,0 +1,246 @@
+/* General Styles */
+.landingPage {
+    font-family: Arial, sans-serif;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* Hero Section */
+.hero {
+    background: #000;
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.heroContent {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.heroTitle {
+    font-size: 2.5rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.heroDescription {
+    font-size: 1.1rem;
+    color: #666;
+    margin-bottom: 2rem;
+}
+
+.ctaButton {
+    background-color: #007bff;
+    ;
+    color: #fff;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1.1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.ctaButton:hover {
+    background-color: #007bff;
+    ;
+}
+
+.heroImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Section Titles */
+.sectionTitle {
+    font-size: 2rem;
+    color: #fff;
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+/* Features Section */
+.features {
+    padding: 4rem 2rem;
+    background-color: #000;
+}
+
+.featureCards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.featureCard {
+    background-color: #18303a;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    cursor: pointer;
+}
+
+.featureCard:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.activeFeature {
+    border: 2px solid #18303a;
+    ;
+}
+
+.featureIcon {
+    font-size: 2rem;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.featureTitle {
+    font-size: 1.25rem;
+    color: #fff;
+    margin-bottom: 0.5rem;
+}
+
+.featureDescription {
+    color: #666;
+}
+
+/* Benefits Section */
+.benefits {
+    padding: 4rem 2rem;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.benefitsContent {
+    max-width: 600px;
+    margin-bottom: 2rem;
+}
+
+.benefitsList {
+    list-style-type: none;
+    padding: 0;
+}
+
+.benefitItem {
+    display: flex;
+    align-items: center;
+    color: #fff;
+    margin-bottom: 1rem;
+}
+
+.benefitIcon {
+    color: #007bff;
+    margin-right: 1rem;
+}
+
+.benefitsImage img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Trusted By Section */
+.trustedBy {
+    padding: 4rem 2rem;
+    background-color: #000;
+    color: #fff;
+}
+
+.companyLogos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.companyLogo {
+    background-color: #fff;
+    padding: 1rem;
+    border-radius: 8px;
+}
+
+/* Setup Section */
+.setup {
+    padding: 4rem 2rem;
+    background-color: #000;
+}
+
+.setupSteps {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+}
+
+.setupStep {
+    background-color: #18303a;
+    border-radius: 8px;
+    padding: 2rem;
+    text-align: center;
+}
+
+.stepTitle {
+    color: #fff;
+    font-size: 1.25rem;
+    margin-bottom: 0.5rem;
+}
+
+.stepDescription {
+    color: #666;
+}
+
+/* CTA Section */
+.cta {
+    padding: 4rem 2rem;
+    background-color: #000;
+    color: #fff;
+    text-align: center;
+}
+
+.ctaTitle {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.ctaDescription {
+    font-size: 1.1rem;
+    margin-bottom: 2rem;
+}
+
+.ctaIcon {
+    margin-left: 0.5rem;
+}
+
+/* Responsive Styles */
+@media (min-width: 768px) {
+    .hero {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 6rem 2rem;
+    }
+
+    .heroContent {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+
+    .benefits {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .benefitsContent {
+        margin-bottom: 0;
+        margin-right: 2rem;
+    }
+}

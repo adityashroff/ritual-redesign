@@ -1,0 +1,281 @@
+/* Global Styles */
+body {
+    background: linear-gradient(135deg, #0f0f0f, #1a1a1a); /* Smooth gradient background */
+    color: #fff;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    scroll-behavior: smooth; /* Smooth scrolling */
+    overflow-x: hidden; /* Prevent horizontal scrolling */
+  }
+  
+  /* Hero Section */
+  .hero-section {
+    position: relative;
+    text-align: center;
+    height: 80vh; /* Taller for more impact */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: url('../assets/images/ritualslideoutlogo.png') no-repeat center center/cover;
+    background-attachment: fixed; /* Parallax effect */
+    background-size: cover;
+  }
+  
+  .hero-overlay {
+    background: rgba(0, 0, 0, 0.7);
+    padding: 20px 40px;
+    border-radius: 10px;
+    text-align: center;
+    animation: slideIn 2s ease-out;
+  }
+  
+  .hero-overlay h1 {
+    font-size: 4rem; /* Bigger title */
+    font-weight: bold;
+    color: #f39c12;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+  }
+  
+  .hero-overlay p {
+    font-size: 1.5rem; /* Larger subtitle */
+    color: #fff;
+    animation: fadeIn 3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateY(-50px);
+      opacity: 0;
+    }
+    to {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  /* About Us Section */
+  .about-us {
+    text-align: center;
+    padding: 60px 20px;
+    background: #111;
+    animation: fadeUp 1.5s ease-in-out;
+  }
+  
+  .about-text h2 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: #f39c12; /* Highlighted heading */
+  }
+  
+  .about-text p {
+    font-size: 1.2rem;
+    margin: 0 auto 40px;
+    max-width: 800px;
+    color: #ccc;
+  }
+  
+  .video-container {
+    margin: 20px auto;
+    width: 90%;
+    max-width: 800px;
+    aspect-ratio: 16 / 9;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.5);
+  }
+  
+  .video-container iframe {
+    width: 100%;
+    height: 100%;
+    border: none;
+  }
+  
+  /* Core Values Section */
+  .core-values {
+    padding: 60px 20px;
+    background: #222;
+    animation: fadeUp 1.5s ease-in-out;
+  }
+  
+  .core-values h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f39c12;
+  }
+  
+  .values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .value-item {
+    background: linear-gradient(135deg, #333, #444);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
+  }
+  
+  .value-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #f39c12; /* Glowing border */
+  }
+  
+  .value-item img {
+    width: 90px;
+    height: 90px;
+    margin-bottom: 15px;
+    transition: transform 0.3s ease;
+  }
+  
+  .value-item img:hover {
+    transform: rotate(15deg) scale(1.2);
+  }
+  
+  .value-item h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #fff;
+  }
+  
+  .value-item p {
+    font-size: 1rem;
+    color: #ccc;
+  }
+  
+  /* Team Section */
+  .team-section {
+    padding: 60px 20px;
+    background: #111;
+  }
+  
+  .team-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    color: #f39c12;
+  }
+  
+  .team-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 30px;
+  }
+  
+  .team-member {
+    background: linear-gradient(to right, #333, #444);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+    border: 2px solid transparent;
+  }
+  
+  .team-member:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+    border: 2px solid #f39c12;
+  }
+  
+  .team-member img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    margin-bottom: 20px;
+    transition: transform 0.3s ease;
+  }
+  
+  .team-member img:hover {
+    transform: scale(1.2);
+  }
+  
+  /* Impact Section */
+  .impact-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: #222;
+  }
+  
+  .impact-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    color: #f39c12;
+  }
+  
+  .impact-section p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    max-width: 800px;
+    margin: 0 auto;
+  }
+  
+  .impact-stats {
+    display: flex;
+    justify-content: center;
+    gap: 50px;
+  }
+  
+  .stat-item h3 {
+    font-size: 2.5rem;
+    color: #f39c12;
+  }
+  
+  .stat-item p {
+    font-size: 1.1rem;
+    color: #ccc;
+  }
+  
+  /* Call-to-Action Section */
+  .cta-section {
+    padding: 60px 20px;
+    text-align: center;
+    background: linear-gradient(135deg, #333, #444);
+  }
+  
+  .cta-section h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .cta-button {
+    padding: 15px 30px;
+    background: linear-gradient(to right, #f39c12, #e67e22);
+    color: #fff;
+    border: 3px solid transparent;
+    border-radius: 30px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    transition: background 0.3s ease, border 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .cta-button:hover {
+    background: linear-gradient(to right, #e67e22, #f39c12);
+    border: 3px solid #fff;
+    box-shadow: 0 6px 12px rgba(255, 255, 255, 0.6);
+  }
+  
+  @keyframes fadeUp {
+    from {
+      opacity: 0;
+      transform: translateY(50px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
