@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from "react";
 import {AppBar,Toolbar,Button,Box,IconButton,Drawer,List,ListItem,ListItemText,} from "@mui/material";
 import MenuIcon from "@mui/icons-material/Menu";
+import { Link } from "react-router-dom";
 import logo from "../assets/images/ritualbluelogo.jpeg";
 import ritualImage from "../assets/images/ritualslideoutlogo.png";
 import ritualBlueMobileLogo from "../assets/images/ritualbluemtlogo.png";
@@ -43,6 +44,9 @@ const Header = () => {
         {!isMobile && (
           <Box component="nav" className="navbar">
             <Button className="navbar-link">Home</Button>
+            <Button component={Link} to="/about" className="navbar-link">
+              About 
+            </Button>
             <Button className="navbar-link">Features</Button>
             <Button className="navbar-link">Partners</Button>
             <Button className="navbar-link">Contact</Button>
@@ -83,13 +87,18 @@ const Header = () => {
             onKeyDown={toggleDrawer(false)}
           >
             <List>
-              {["Home", "Features", "Partners", "Contact", "Download Ritual"].map(
-                (text) => (
-                  <ListItem button key={text}>
-                    <ListItemText primary={text} />
-                  </ListItem>
-                )
-              )}
+              {[
+                { text: "Home", path: "/" },
+                { text: "About", path: "/about" }, // Added About link in mobile menu
+                { text: "Features", path: "/features" },
+                { text: "Partners", path: "/partners" },
+                { text: "Contact", path: "/contact" },
+                { text: "Download Ritual", path: "/download" },
+              ].map(({ text, path }) => (
+                <ListItem button key={text} component={Link} to={path}>
+                  <ListItemText primary={text} />
+                </ListItem>
+              ))}
             </List>
           </Box>
         </Drawer>
