@@ -1,19 +1,19 @@
 import React from 'react';
-import Header from './reusable/Header';  
-import Footer from './reusable/Footer';
-import Homepage from './components/Homepage';
-function App() {
+import { BrowserRouter as Router } from 'react-router-dom';
+import AppRoutes from './Routes'; // Import the routing logic
+import Header from './reusable/Header'; // Common Header
+import Footer from './reusable/Footer'; // Common Footer
+
+const App = () => {
   return (
-    <div>
+    <Router>
       <Header />
       <main>
-        <div>
-          < Homepage />
-        </div>
+        <AppRoutes />
       </main>
       <Footer />
-    </div>
+    </Router>
   );
-}
+};
 
 export default App;
