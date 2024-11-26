@@ -2,6 +2,7 @@ import React from "react";
 import { Box, Typography, Button } from "@mui/material";
 import { Facebook, Twitter, Instagram } from "@mui/icons-material"; 
 import { Android, Apple } from "@mui/icons-material"; 
+import { Link } from "react-router-dom"; 
 import "../styles/Footer.css";
 
 const Footer = () => {
@@ -13,24 +14,24 @@ const Footer = () => {
           <Typography variant="h6" className="footer-title">
             Company
           </Typography>
-          <a href="#about" className="footer-link">About Us</a>
-          <a href="#careers" className="footer-link">Careers</a>
-          <a href="#press" className="footer-link">Press</a>
+          <Link to="/about" className="footer-link">About Us</Link> 
+          <Link to="/Business" className="footer-link">Business</Link> 
+          <Link to="/AppPage" className="footer-link">Ritual App</Link> 
         </Box>
         <Box className="footer-links">
           <Typography variant="h6" className="footer-title">
             Resources
           </Typography>
-          <a href="#blog" className="footer-link">Blog</a>
-          <a href="#support" className="footer-link">Support</a>
-          <a href="#faq" className="footer-link">FAQs</a>
+          <Link to="https://ritual.co/blog" className="footer-link">Blog</Link> 
+          <Link to="https://ritual.co/restaurants/help-centre" className="footer-link">Help Center</Link> 
+          <Link to="https://ritual.co/faq" className="footer-link">FAQs</Link> 
         </Box>
         <Box className="footer-links">
           <Typography variant="h6" className="footer-title">
-            Contact
+            For Customers
           </Typography>
-          <a href="#contact" className="footer-link">Contact Us</a>
-          <a href="#locations" className="footer-link">Locations</a>
+          <Link to="https://ritual.co/eatlocal/welcome?_branch_match_id=1365876289150267572&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8wryyxJ1SvKLClNzNFLztf38Pd1DXB0d7WvK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQB5Rhq0OwAAAA%3D%3D" className="footer-link">Ritual App</Link> {/* Updated Link */}
+          <Link to="https://ritual.co/terms?_branch_match_id=1365876289150267572&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8wryyxJ1SvKLClNzNFLztf38Pd1DXB0d7WvK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQB5Rhq0OwAAAA%3D%3D" className="footer-link">Terms Of Service</Link> {/* Updated Link */}
         </Box>
       </Box>
 

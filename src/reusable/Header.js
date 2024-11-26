@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from "react";
-import {AppBar,Toolbar,Button,Box,IconButton,Drawer,List,ListItem,ListItemText,} from "@mui/material";
+import { AppBar, Toolbar, Button, Box, IconButton, Drawer, List, ListItem, ListItemText } from "@mui/material";
+import { Link } from 'react-router-dom'; // Import Link from react-router-dom
 import MenuIcon from "@mui/icons-material/Menu";
 import logo from "../assets/images/ritualbluelogo.jpeg";
 import ritualImage from "../assets/images/ritualslideoutlogo.png";
@@ -28,10 +29,7 @@ const Header = () => {
   };
 
   return (
-    <AppBar
-      position="static"
-      className="header-appbar"
-    >
+    <AppBar position="static" className="header-appbar">
       <Toolbar className="header-toolbar">
         {/* Logo with Sliding Image */}
         <div className="logo-container">
@@ -42,27 +40,41 @@ const Header = () => {
         {/* Navbar for Desktop */}
         {!isMobile && (
           <Box component="nav" className="navbar">
-            <Button className="navbar-link">Home</Button>
-            <Button className="navbar-link">Features</Button>
-            <Button className="navbar-link">Partners</Button>
-            <Button className="navbar-link">Contact</Button>
+            <Link to="/" className="navbar-link">
+              <Button>Home</Button>
+            </Link>
+            <Link to="/About" className="navbar-link">
+              <Button>About Us</Button>
+            </Link>
+            <Link to="/business" className="navbar-link">
+              <Button>Business</Button>
+            </Link>
+            <Link to="/apppage" className="navbar-link">
+              <Button>Ritual App</Button>
+            </Link>
           </Box>
         )}
 
-{isMobile && (
-  <img
-    src={ritualBlueMobileLogo}
-    alt="Ritual Mobile Logo"
-    className="mobile-center-logo"
-  />
-)}
+        {isMobile && (
+          <img
+            src={ritualBlueMobileLogo}
+            alt="Ritual Mobile Logo"
+            className="mobile-center-logo"
+          />
+        )}
 
         {/* Download Ritual Button */}
         {!isMobile && (
-          <Button variant="contained" className="download-button">
-            Download Ritual
-          </Button>
-        )}
+  <Button
+    variant="contained"
+    className="download-button"
+    href="https://ritual.co/order/get-started/RITUALWELCOME?_branch_match_id=874692517667835832&_branch_referrer=H4sIAAAAAAAAA8soKSkottLXz8wryyxJ1SvKLClNzNFLztf38Pd1DXB0d7WvK0pNSy0qysxLj08qyi8vTi2ydc4oys9NBQB5Rhq0OwAAAA%3D%3D&promo=RITUALWELCOME"
+    target=""
+    rel="noopener noreferrer"
+  >
+    Download Ritual App
+  </Button>
+)}
 
         {/* Hamburger Menu for Mobile */}
         {isMobile && (
@@ -77,16 +89,14 @@ const Header = () => {
 
         {/* Drawer for Mobile Menu */}
         <Drawer anchor="right" open={isDrawerOpen} onClose={toggleDrawer(false)}>
-          <Box
-            role="presentation"
-            onClick={toggleDrawer(false)}
-            onKeyDown={toggleDrawer(false)}
-          >
+          <Box role="presentation" onClick={toggleDrawer(false)} onKeyDown={toggleDrawer(false)}>
             <List>
-              {["Home", "Features", "Partners", "Contact", "Download Ritual"].map(
-                (text) => (
+              {["Home", "About Us", "Business", "Ritual App", "Download Ritual"].map(
+                (text, index) => (
                   <ListItem button key={text}>
-                    <ListItemText primary={text} />
+                    <Link to={text === "Home" ? "/" : `/${text.toLowerCase().replace(" ", "-")}`}>
+                      <ListItemText primary={text} />
+                    </Link>
                   </ListItem>
                 )
               )}
