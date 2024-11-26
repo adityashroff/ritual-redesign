@@ -1,0 +1,230 @@
+/* Import Poppins Font */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap');
+
+/* General Styles */
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Poppins', sans-serif;
+  background-color: #000; /* Black Background */
+  color: #fff; /* White Text */
+  box-sizing: border-box;
+}
+
+.app-page-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+/* Hero Section */
+.hero-section {
+  background: linear-gradient(135deg, #0c04f5f6, #15a5e3);
+  color: #000;
+  text-align: center;
+  padding: 100px 20px;
+  border-bottom: 5px solid #000;
+}
+
+.hero-section h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  color: #000;
+}
+
+.hero-section p {
+  font-size: 1.25rem;
+  line-height: 1.5;
+  margin-bottom: 30px;
+}
+
+.cta-button {
+  background-color: #0478fd;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cta-button:hover {
+  background-color: #08dc47;
+  transform: translateY(-3px);
+}
+
+/* Features Section */
+.features-section {
+  background-color: #121212; /* Slightly lighter black for contrast */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.features-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 40px;
+  color: #0000;
+}
+
+.features-container {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.feature-card {
+  background: #1e1e1e; /* Dark Grey for contrast */
+  border: 1px solid #333;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+  padding: 20px;
+  width: 280px;
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.6);
+}
+
+.feature-card h3 {
+  font-size: 1.8rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  color: #087eed;
+}
+
+.feature-card p {
+  font-size: 1rem;
+  color: #bbb;
+  line-height: 1.6;
+}
+
+/* Restaurant Description Section */
+.menu-section {
+  background-color: #1e1e1e; /* Dark Grey Background */
+  padding: 60px 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  text-align: left;
+}
+
+.menu-container {
+  display: flex;
+  align-items: center;
+  max-width: 1200px;
+  gap: 20px;
+  flex-wrap: wrap; /* Ensures it wraps on smaller screens */
+}
+
+.rest-image {
+  width: 300px; /* Restrict the image width */
+  height: auto; /* Maintain aspect ratio */
+  border-radius: 8px; /* Rounded corners */
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+}
+
+.menu-text {
+  flex: 1; /* Take remaining space beside the image */
+  color: #fff;
+  padding: 20px;
+}
+
+.menu-text h2 {
+  font-size: 2rem;
+  margin-bottom: 15px;
+  color: #1e88e5; /* Accent color for heading */
+}
+
+.menu-text p {
+  font-size: 1rem;
+  line-height: 1.8;
+  margin-bottom: 10px;
+  color: #ccc;
+}
+
+/* Call-to-Action Section */
+.cta-section {
+  background: #000;
+  color: #fff;
+  text-align: center;
+  padding: 80px 20px;
+}
+
+.cta-section h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+}
+
+.cta-section p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+}
+
+.cta-download-button {
+  background-color: #1e88e5;
+  color: #fff;
+  border: none;
+  padding: 15px 30px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  
+}
+
+.cta-download-button:hover {
+  background-color: #08dc47;
+  transform: translateY(-3px);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .features-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .feature-card {
+    width: 90%;
+  }
+
+  .hero-section h1 {
+    font-size: 2.5rem;
+  }
+
+  .hero-section p {
+    font-size: 1.1rem;
+  }
+
+  .cta-section h2 {
+    font-size: 2rem;
+  }
+
+  .menu-container {
+    flex-direction: column;
+    text-align: center; /* Center-align text on small screens */
+  }
+
+  .rest-image {
+    width: 90%; /* Full-width image for small screens */
+    margin-bottom: 20px;
+  }
+
+  .menu-text h2 {
+    font-size: 1.8rem;
+  }
+
+  .menu-text p {
+    font-size: 1rem;
+  }
+}
